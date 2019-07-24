@@ -67,7 +67,31 @@ switch (num) {
     default:
         console.log("Что-то пошло не так");
         break;
-   }
+   };
+
+// ================= Цыклы ===========================//
+   let  num1 = 50;
+   while (num1 < 55) {
+       console.log(num);
+       num1++;
+   };
+
+
+do {
+    console.log(num1);
+    num1++;
+}
+while(num1 < 55);
+
+for (let i = 1; i < 8; i++) {
+    if (i==6) {
+        break                   // Пстанавливает цикл
+    } else if (i==3) {
+        continue                // Пропускает итерацию
+    }
+    console.log(i)
+}
+
 
 
 

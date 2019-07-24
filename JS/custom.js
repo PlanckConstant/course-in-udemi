@@ -1,4 +1,4 @@
-let money = prompt("Ваш бюджет на месяц?","");
+let money = +prompt("Ваш бюджет на месяц?","");
 let time = prompt("Введите дату в формате YYYY- MM-DD","");
 
 let appData = {
@@ -15,9 +15,9 @@ let appData = {
 
 // console.log(appData);   
 function dailyBudget() {
-    let i = (+money - +appData.expenses.answer2)/30;
+    let i = (money - +appData.expenses.answer2)/30;
     alert(i);
 };
-
+console.log(typeof(money));
 dailyBudget();
 
