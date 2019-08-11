@@ -5,8 +5,8 @@ let appData = {
     budget: money,         //бюджет
     time,                  //данные времени
     expenses: {
-        answer1: prompt("Введите обязательную статью расходов в этом месяце"),
-        answer2: +prompt("Во сколько обойдется?")
+        // answer1: prompt("Введите обязательную статью расходов в этом месяце"),
+        // answer2: +prompt("Во сколько обойдется?")
     },                     //объект с обязательными расходами
     optionalExpenses: {},  //объект с необязательными расходами
     income: [],            //массив данных с доп. доходом
@@ -14,30 +14,31 @@ let appData = {
 };
 
 
-for (let i = 0; i < 2; i++) {
-    let a = prompt("Введите обязательную статью расходов в этом месяце");
-        b = +prompt("Во сколько обойдется?");
-
-    if ((typeof(a)) === 'string' && (typeof(a)) != null && (typeof(b)) != null && a != '' && b != '' && a.length < 50) {
-        console.log("done");
-        appData.expenses[a] = b;
-    }   else    {
-        console.log("Something went wrong");
-    }
-};
-
-
-// let i = 0
-// while (i < 2) {
+// for (let i = 0; i < 2; i++) {
 //     let a = prompt("Введите обязательную статью расходов в этом месяце");
 //         b = +prompt("Во сколько обойдется?");
-//     while ((typeof(a)) === 'string' && (typeof(a)) != null && (typeof(b)) != null && a != '' && b != '' && a.length < 50) {
+
+//     if ((typeof(a)) === 'string' && (typeof(a)) != null && (typeof(b)) != null && a != '' && b != '' && a.length < 50) {
 //         console.log("done");
 //         appData.expenses[a] = b;
 //         break;
-//     }
-//     i++;
+//     }   else    {
+//         console.log("Something went wrong");
+//     };
+    
 // };
+
+
+let i = 0
+while (i < 2) {
+    let a = prompt("Введите обязательную статью расходов в этом месяце");
+        b = +prompt("Во сколько обойдется?");
+    while ((typeof(a)) === 'string' && (typeof(a)) != null && (typeof(b)) != null && a != '' && b != '' && a.length < 50) {
+        console.log("done");
+        appData.expenses[a] = b;    
+    }
+    i++;
+};
 
 
 
