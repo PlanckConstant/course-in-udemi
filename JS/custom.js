@@ -18,7 +18,7 @@ let appData = {
     },                     //объект с обязательными расходами
     optionalExpenses: {},  //объект с необязательными расходами
     income: [],            //массив данных с доп. доходом
-    savings: false         //свойство
+    savings: true         //свойство
 };
 
 function chooseExpenses() {
@@ -40,6 +40,28 @@ chooseExpenses();
 
 appData.moneyPerDay = (appData.budget / 30).toFixed(1); 
 
+alert("Ежедневный бюджет " +appData.moneyPerDay);
+
+if(appData.moneyPerDay < 100) {
+    console.log("minimum");
+} else if (appData.moneyPerDay > 100 && appData.moneyPerDay < 2000) {
+    console.log("midle");
+} else if (appData.moneyPerDay > 2000) {
+    console.log("big");
+} else {
+    console.log("This is mistake")
+};
+
+function checkSaving (){
+    if (appData.savings == true) {
+        let save = +prompt("Какова сумма накоплений"),
+            percent = +prompt("Под какой процент");
+        appData.monthIncome = save/100/12*percent;
+        alert("Доход с депозита в месяц: " + appData.monthIncome);
+    }
+}
+
+checkSaving();
 
 // toFixed при округлении возвращает строку
 
@@ -91,17 +113,17 @@ appData.moneyPerDay = (appData.budget / 30).toFixed(1);
 
 // appData.moneyPerDay = appData.budget / 30;
 
-alert("Ежедневный бюджет " +appData.moneyPerDay);
+// alert("Ежедневный бюджет " +appData.moneyPerDay);
 
-if(appData.moneyPerDay < 100) {
-    console.log("minimum");
-} else if (appData.moneyPerDay > 100 && appData.moneyPerDay < 2000) {
-    console.log("midle");
-} else if (appData.moneyPerDay > 2000) {
-    console.log("big");
-} else {
-    console.log("This is mistake")
-};
+// if(appData.moneyPerDay < 100) {
+//     console.log("minimum");
+// } else if (appData.moneyPerDay > 100 && appData.moneyPerDay < 2000) {
+//     console.log("midle");
+// } else if (appData.moneyPerDay > 2000) {
+//     console.log("big");
+// } else {
+//     console.log("This is mistake")
+// };
 
 
 
