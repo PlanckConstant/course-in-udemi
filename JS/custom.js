@@ -13,7 +13,7 @@ start();
 
 let appData = {
     budget: money,         //бюджет
-    timeData: time,                  //данные времени
+    timeData: time,        //данные времени
     expenses: {
     },                     //объект с обязательными расходами
     optionalExpenses: {},  //объект с необязательными расходами
