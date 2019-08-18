@@ -27,6 +27,15 @@
     });
 
 
+    let mass = [1,3,4,6,7];
+
+    for (let key in mass) { // цикл для вывода ключей массива
+        console.log (key);
+    };
+    for (let key of mass) { // цикл для вывода значений массива
+        console.log (key);
+    };
+
     function fun1() {
         arr.pop();      // метод .pop удаляет последний элемент массива
         arr.push('5')   // метод .push добавляет в конце новый элемент
