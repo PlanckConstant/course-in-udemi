@@ -90,9 +90,24 @@
     function joinToNumber () {
         let arr = [1,35,75,2,4,14];
             i = arr.sort(compareNum);         // метод .sort сортирует массив как строку
-
-        function compareNum(a,b) {       // так можно заставить упорядочивать по значению, а не строке. ХЗ как работает. Сравнивает каждую пару.
+// так можно заставить упорядочивать по значению, а не строке. ХЗ как работает. Сравнивает каждый элемент массива.
+        function compareNum(a,b) { 
             return a-b;
         };
     console.log(arr);  
     }
+
+
+    let solider = {
+        health: 400,
+        armor: 100
+    };
+
+    let join = {
+        health: 100
+    };
+
+    join.__proto__ = solider;
+
+    console.log(join);
+    console.log(join.armor);
